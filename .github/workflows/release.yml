@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: src/go.mod
+
+      - run: ./test.sh
+
+      - name: Build Mac Apple Silicon
+        run: GOOS=darwin GOARCH=arm64 go build -o ../suppress_success-mac-apple-silicon .
+        working-directory: src
+
+      - name: Build Mac Intel
+        run: GOOS=darwin GOARCH=amd64 go build -o ../suppress_success-mac-intel .
+        working-directory: src
+
+      - name: Create release
+        run: gh release create "${{ github.ref_name }}" suppress_success-mac-apple-silicon suppress_success-mac-intel --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
