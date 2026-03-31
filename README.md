@@ -6,9 +6,7 @@
 
 <p align="center">A CLI replacing output on success</p>
 
-<p align="center">
-  <a href="https://github.com/lexler/suppress_success/actions/workflows/build.yml"><img src="https://github.com/lexler/suppress_success/actions/workflows/build.yml/badge.svg" alt="Build"></a>
-</p>
+[![Build](https://github.com/isidore/SuppressSuccess/actions/workflows/build.yml/badge.svg)](https://github.com/isidore/SuppressSuccess/actions/workflows/build.yml)
 
 ## Installation
 
