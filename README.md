@@ -4,7 +4,9 @@
 
 <h1 align="center">suppress_success</h1>
 
-<p align="center">A CLI replacing output on success</p>
+<p align="center"><em>Noise-free by design.</em></p>
+
+<p align="center">A CLI that suppresses output on success. On failure, it prints the full output for debugging and returns the original exit code.</p>
 
 [![Build](https://github.com/isidore/SuppressSuccess/actions/workflows/build.yml/badge.svg)](https://github.com/isidore/SuppressSuccess/actions/workflows/build.yml)
 
