@@ -17,7 +17,9 @@ Download the latest binary from [GitHub Releases](https://github.com/lexler/supp
 curl -L https://github.com/lexler/suppress_success/releases/latest/download/suppress_success-mac-apple-silicon -o suppress_success
 chmod +x suppress_success
 mv suppress_success /usr/local/bin/
+```
 
+```bash
 # Mac Intel
 curl -L https://github.com/lexler/suppress_success/releases/latest/download/suppress_success-mac-intel -o suppress_success
 chmod +x suppress_success
